@@ -1,11 +1,11 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 
-const PrivateRouter = ({isAutenticate}) => {
+const PrivateRouter = ({isAutenticated}) => {
   return (
     <div>
         {
-            isAutenticate ? <Outlet /> : <Navigate to={'/home'} />
+            isAutenticated === 'authenticated' ? <Outlet /> : <Navigate to='/' />
         }
     </div>
   )
