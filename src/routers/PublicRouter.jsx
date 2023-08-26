@@ -1,11 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 
-const PublicRouter = ({isAutenticate}) => {
+const PublicRouter = ({isAutenticated}) => {
+  
   return (
     <div>
         {
-           isAutenticate ? <Navigate to={'/'}/> : <Outlet/> 
+           isAutenticated === 'authenticated' ? <Navigate to='/home'/> : <Outlet/> 
         }
     </div>
   )

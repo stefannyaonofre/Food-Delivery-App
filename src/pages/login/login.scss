@@ -11,6 +11,8 @@
                  -20px -20px 60px #ffffff;
         .login-button {
             background-color: $white;
+            color: $black;
+            font-weight: bold;
         }
         .login-button:hover {
             color: $red;
