@@ -5,7 +5,6 @@ import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import { initialUser, userReducer } from "../reducers/useReducer";
-import Registro from "../pages/registro/Registro";
 
 const Router = () => {
 
@@ -16,11 +15,10 @@ const Router = () => {
       <Routes>
         <Route path="/">
             <Route element={<PublicRouter isAutenticated={userLogin.isAutenticated} />}>
-                <Route index element={<Login />} />
-                <Route path="registro" element={<Registro />} />
+                <Route index element={<Home />} />
             </Route>
             <Route element={<PrivateRouter isAutenticated={userLogin.isAutenticated} />}>
-              <Route path="home" element={<Home/>} />  
+              <Route path="home" element={<Login/>} />  
             </Route>
         </Route>
       </Routes>

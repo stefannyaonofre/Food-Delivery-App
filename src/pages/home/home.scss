@@ -1,0 +1,21 @@
+.container-home{
+    padding: 20px;
+}
+
+.container-filtro{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: space-around;
+
+    &-item{
+        background-color: rgb(224, 221, 221);
+        width: 140px;
+        height: 40px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 7px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
