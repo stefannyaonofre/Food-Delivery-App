@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Carrusel from "../../components/carrusel/Carrusel";
 import "./home.scss";
@@ -7,6 +8,8 @@ import pizza from "/pizza.png";
 import CardRestaurante from "../../components/cardRestaurante/CardRestaurante";
 
 const Home = () => {
+  // const prods = useSelector((store) => store.auth);
+  // console.log('estas son las prods',prods.displayName)
   return (
     <>
       <div className="container-home">
