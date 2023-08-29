@@ -8,6 +8,10 @@ import { initialUser, userReducer } from "../reducers/useReducer";
 import Registro from "../pages/registro/Registro";
 import Carrusel from "../components/carrusel/Carrusel";
 import { useSelector } from "react-redux";
+import Search from "../components/search/Search";
+import Profile from "../components/profile/Profile";
+import Orders from "../components/orders/Orders";
+import Layout from "../components/layout/Layout";
 
 const Router = () => {
 
@@ -23,8 +27,13 @@ const Router = () => {
                 <Route path="registro" element={<Registro />} />
             </Route>
             <Route element={<PrivateRouter isAutenticated={status} />}>
+            <Route element={<Layout/>}>
               <Route path="home" element={<Home/>} />  
               <Route path="carrusel" element={<Carrusel/>}/>
+              <Route path="search" element={<Search/>}/>
+              <Route path="orders" element={<Orders/>}/>
+              <Route path="profile" element={<Profile/>}/>
+              </Route>
             </Route>
         </Route>
       </Routes>
