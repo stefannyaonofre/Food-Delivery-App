@@ -8,6 +8,7 @@ import { initialUser, userReducer } from "../reducers/useReducer";
 import Registro from "../pages/registro/Registro";
 import Carrusel from "../components/carrusel/Carrusel";
 import { useSelector } from "react-redux";
+import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
 import Search from "../components/search/Search";
 import Profile from "../components/profile/Profile";
 import Orders from "../components/orders/Orders";
@@ -17,7 +18,7 @@ const Router = () => {
 
   const [userLogin, userDispatch] = useReducer(userReducer, initialUser)
   const {status} = useSelector(state => state.auth)
-  console.log(status)
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -28,8 +29,8 @@ const Router = () => {
             </Route>
             <Route element={<PrivateRouter isAutenticated={status} />}>
             <Route element={<Layout/>}>
-              <Route path="home" element={<Home/>} />  
-              <Route path="carrusel" element={<Carrusel/>}/>
+              <Route path="home" element={<Home/>} /> 
+              <Route path="restaurant" element={<RestaurantPage />} />
               <Route path="search" element={<Search/>}/>
               <Route path="orders" element={<Orders/>}/>
               <Route path="profile" element={<Profile/>}/>

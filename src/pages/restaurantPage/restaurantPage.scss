@@ -1,0 +1,24 @@
+.container__page-restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+
+    &__logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+
+        &__img {
+            width: 35%;
+            height: 150px;
+            clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
