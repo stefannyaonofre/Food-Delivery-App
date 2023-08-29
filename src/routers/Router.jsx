@@ -8,12 +8,13 @@ import { initialUser, userReducer } from "../reducers/useReducer";
 import Registro from "../pages/registro/Registro";
 import Carrusel from "../components/carrusel/Carrusel";
 import { useSelector } from "react-redux";
+import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
 
 const Router = () => {
 
   const [userLogin, userDispatch] = useReducer(userReducer, initialUser)
   const {status} = useSelector(state => state.auth)
-  console.log(status)
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -25,6 +26,7 @@ const Router = () => {
             <Route element={<PrivateRouter isAutenticated={status} />}>
               <Route path="home" element={<Home/>} />  
               <Route path="carrusel" element={<Carrusel/>}/>
+              <Route path="restaurant" element={<RestaurantPage />} />
             </Route>
         </Route>
       </Routes>

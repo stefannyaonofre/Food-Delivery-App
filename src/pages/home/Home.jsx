@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <div className="container-home">
         <Carrusel />
-        <h4>Restaurants and cafes</h4>
+        <span>Restaurants and cafes</span>
         <section className="container-filtro">
           <div className="container-filtro-item">
             <span>All</span>
