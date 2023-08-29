@@ -1,15 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Carrusel from "../../components/carrusel/Carrusel";
 import "./home.scss";
 import hamburguesa from "/hamburguesa.png";
 import pizza from "/pizza.png";
 import CardRestaurante from "../../components/cardRestaurante/CardRestaurante";
+import Navbar from "../../components/navbar/Navbar";
 
 const Home = () => {
-  // const prods = useSelector((store) => store.auth);
-  // console.log('estas son las prods',prods.displayName)
+ 
+ 
   return (
     <>
       <div className="container-home">
@@ -30,8 +31,6 @@ const Home = () => {
         </section>
         <CardRestaurante />
       </div>
-
-      <Outlet />
     </>
   );
 };
