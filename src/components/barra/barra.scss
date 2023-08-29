@@ -1,0 +1,19 @@
+@import "../../assets/estilos/variables.scss";
+@import "../../assets/estilos/reset.scss";
+
+@media (max-width: 600px) {
+    .inicio__logo{
+        background-color: $amarillo;
+        height: 100vh;
+        .barra__celular{
+            width: 100%;
+        }
+        .logo__principal{
+            left: 38%;
+            position: relative;
+            top: 20rem;
+        }
+    }
+
+}
+    
