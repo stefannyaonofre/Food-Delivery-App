@@ -12,19 +12,26 @@ import Search from "../components/search/Search";
 import Profile from "../components/profile/Profile";
 import Orders from "../components/orders/Orders";
 import Layout from "../components/layout/Layout";
+import Order from "../pages/order/Order";
+import CurrentOrder from "../pages/currentOrder/CurrentOrder";
+import OrderAccepted from "../pages/orderAccepted/OrderAccepted";
+import Payment from "../pages/payment/Payment";
+import NewCard from "../pages/newCard/NewCard";
+import ManageAdresses from "../pages/manageAdresses/ManageAdresses";
 import ProfileEdit from "../components/profileEdit/ProfileEdit";
 import LoginPhone from "../pages/loginPhone/LoginPhone";
 import InsertCode from "../components/insertCode/InsertCode";
 
 const Router = () => {
 
- 
-  const {status} = useSelector(state => state.auth)
-  
+  const [userLogin, userDispatch] = useReducer(userReducer, initialUser)
+  const { status } = useSelector(state => state.auth)
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/">
+
             <Route element={<PublicRouter isAutenticated={status} />}>
                 <Route index element={<Login />} />
                 <Route path="registro" element={<Registro />} />
@@ -39,8 +46,15 @@ const Router = () => {
               <Route path="orders" element={<Orders/>}/>
               <Route path="profile" element={<Profile/>}/>
               <Route path="profileEdit" element={<ProfileEdit/>}/>
+              <Route path='adresses' element={<ManageAdresses />} />
+              <Route path='order' element={<Order />} />
+              <Route path='current' element={<CurrentOrder />} />
+              <Route path='accepted' element={<OrderAccepted />} />
+              <Route path='payment' element={<Payment />} />
+              <Route path='new-card' element={<NewCard />} />
               </Route>
             </Route>
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
