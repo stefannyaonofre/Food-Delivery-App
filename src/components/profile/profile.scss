@@ -1,0 +1,54 @@
+@import '../../styles/styles.scss';
+
+h2 {
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nameUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    background-color:#F2F2F2;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    
+    .user-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    
+    .profile-info {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: space-between;
+      
+      .edit-account {
+        margin-right: 10px;
+        color: $black;
+      }
+      
+      .arrow-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  

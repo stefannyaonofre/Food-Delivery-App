@@ -69,7 +69,6 @@ export const loginWithEmailPassword = async ({ email, password }) => {
       password
     );
     const { uid, photoURL, displayName } = resp.user;
-        console.log(resp)
     return {
       ok: true,
       uid,
@@ -80,3 +79,27 @@ export const loginWithEmailPassword = async ({ email, password }) => {
     return { ok: false, errorMessage: error.message };
   }
 };
+
+export const signInWithCode = async (code) => {
+  
+  const confirmationResult = window.confirmationResult;
+  try {
+
+    const result = await confirmationResult.confirm(code);
+    const user = result.user;
+    const authUser = {
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+      phoneNumber: user.phoneNumber,
+      accessToken: user.accessToken,
+    };
+  
+    return {
+      ok: true,
+      ...authUser,
+    };
+  } catch (error) {
+    return { ok: false, errorMessage: error.message };
+  }
+};
+

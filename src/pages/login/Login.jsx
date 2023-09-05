@@ -45,6 +45,10 @@ const Login = () => {
     }
   };
 
+  const onLoginByPhone = () =>{
+    navigate('/loginphone')
+  }
+
 
   return (
     <main className="d-flex justify-content-center align-items-center vw-100 vh-100 login">
@@ -99,12 +103,11 @@ const Login = () => {
           <img src={google} /> Google
         </button>
 
-        <button type="submit" className="btn login-button mb-4">
-          <img src={fb} />
-          Facebook
-        </button>
-
-        <button type="submit" className="btn login-button mb-4">
+        <button 
+        type="submit" 
+        className="btn login-button mb-4"
+        onClick={onLoginByPhone}
+        >
           <img src={phone} />
           Código de verificación
         </button>
