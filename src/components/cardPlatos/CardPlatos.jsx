@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import './cardPlatos.scss';
 
-const CardPlatos = () => {
+const CardPlatos = ({plato}) => {
   return (
-    <div>CardPlatos</div>
+    <section className='card-platos'>
+      <img src={plato.imagen} alt={plato.id} />
+      <span>{plato.nombre}</span>
+      
+      <span>${plato.precio}</span>
+
+    </section>
   )
 }
 
