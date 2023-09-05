@@ -41,3 +41,10 @@
         justify-content: space-evenly;
     }
 }
+
+.container-platos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}

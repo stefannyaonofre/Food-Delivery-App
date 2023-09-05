@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { Outlet, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import Carrusel from "../../components/carrusel/Carrusel";
 import "./home.scss";
 import hamburguesa from "/hamburguesa.png";
@@ -8,20 +7,24 @@ import pizza from "/pizza.png";
 import CardRestaurante from "../../components/cardRestaurante/CardRestaurante";
 import localizacion from "/Svg.png";
 import { getRestaurantesFromCollection } from "../../services/restaurantesServices";
+import { fillRestaurantsFromCollection } from "../../store/restaurants/restaurantsAction";
 
 const Home = () => {
 
-  const [restaurantes, setRestaurantes] = useState([])
+  const dispatch = useDispatch();
+  // const [restaurantes, setRestaurantes] = useState([]);
+  const { restaurants } = useSelector(store => store.restaurants)
 
   useEffect(() => {
-    getRestaurantes()
-  }, [])
+    // getRestaurantes()
+    dispatch(fillRestaurantsFromCollection())
+  }, [dispatch])
 
-  const getRestaurantes = async () => {
-    const restaurants = await getRestaurantesFromCollection();
-    setRestaurantes(restaurants);
-    console.log(restaurants);
-  }
+  // const getRestaurantes = async () => {
+  //   const restaurants = await getRestaurantesFromCollection();
+  //   setRestaurantes(restaurants);
+  //   console.log(restaurants);
+  // }
 
   return (
     <>
@@ -52,7 +55,12 @@ const Home = () => {
             <span>Pizza</span>
           </div>
         </section>
-        <CardRestaurante />
+        {
+          restaurants?.map(data => (
+            <CardRestaurante restaurant={data} key={data.id}/>
+          ))
+        }
+        
       </div>
     </>
   );

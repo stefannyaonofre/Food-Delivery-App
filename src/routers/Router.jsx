@@ -1,11 +1,10 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import Registro from "../pages/registro/Registro";
-import Carrusel from "../components/carrusel/Carrusel";
 import { useSelector } from "react-redux";
 import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
 import Search from "../components/search/Search";
@@ -40,7 +39,7 @@ const Router = () => {
             <Route element={<PrivateRouter isAutenticated={status} />}>
             <Route element={<Layout/>}>
               <Route path="home" element={<Home/>} /> 
-              <Route path="restaurant" element={<RestaurantPage />} />
+              <Route path=":idRestaurant" element={<RestaurantPage />} />
               <Route path="search" element={<Search/>}/>
               <Route path="orders" element={<Orders/>}/>
               <Route path="profile" element={<Profile/>}/>
