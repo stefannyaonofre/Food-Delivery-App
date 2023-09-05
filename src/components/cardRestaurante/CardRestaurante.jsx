@@ -4,60 +4,27 @@ import restaurante from "/restaurante.png";
 import start from '/start.svg';
 import { useNavigate } from 'react-router-dom';
 
-const CardRestaurante = () => {
+const CardRestaurante = ({restaurant}) => {
 
   const navigate = useNavigate()
 
-  const handleClick = () =>{
-    navigate('/restaurant')
+  const handleClick = (id) =>{
+    navigate(`/${id}`)
   }
 
   return (
     <>
-    <section className='container-cardRes' onClick={handleClick}>
+    <section className='container-cardRes' onClick={() => handleClick(restaurant.id)}>
       <div className='container-cardRes__img'>
-        <img src={restaurante} />
+        <img src={restaurant.imagen} />
       </div>
       <div className='container-cardRes__info'>
-        <h5>Pardes Restaurant</h5>
+        <h5>{restaurant.nombre}</h5>
         <img src={start} />
-        <p>Work Time <span>09:30</span> <span>23:00</span></p>
-        <span>Before you 4$</span>
+        <p>Work Time <span>{restaurant.horario}</span></p>
+        <span>Before you ${restaurant.promedioPrecios}</span>
       </div>
     </section>
-    <section className='container-cardRes'>
-    <div className='container-cardRes__img'>
-      <img src={restaurante} />
-    </div>
-    <div className='container-cardRes__info'>
-      <h5>Pardes Restaurant</h5>
-      <img src={start} />
-      <p>Work Time <span>09:30</span> <span>23:00</span></p>
-      <span>Before you 4$</span>
-    </div>
-  </section>
-  <section className='container-cardRes'>
-    <div className='container-cardRes__img'>
-      <img src={restaurante} />
-    </div>
-    <div className='container-cardRes__info'>
-      <h5>Pardes Restaurant</h5>
-      <img src={start} />
-      <p>Work Time <span>09:30</span> <span>23:00</span></p>
-      <span>Before you 4$</span>
-    </div>
-  </section>
-  <section className='container-cardRes'>
-    <div className='container-cardRes__img'>
-      <img src={restaurante} />
-    </div>
-    <div className='container-cardRes__info'>
-      <h5>Pardes Restaurant</h5>
-      <img src={start} />
-      <p>Work Time <span>09:30</span> <span>23:00</span></p>
-      <span>Before you 4$</span>
-    </div>
-  </section>
   </>
 
   )

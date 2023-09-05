@@ -5,7 +5,6 @@ import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import Registro from "../pages/registro/Registro";
-import Carrusel from "../components/carrusel/Carrusel";
 import { useDispatch, useSelector } from "react-redux";
 import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
 import Search from "../components/search/Search";
@@ -72,6 +71,8 @@ const Router = () => {
               <Route path="accepted" element={<OrderAccepted />} />
               <Route path="payment" element={<Payment />} />
               <Route path="new-card" element={<NewCard />} />
+
+            
             </Route>
           </Route>
         </Route>
