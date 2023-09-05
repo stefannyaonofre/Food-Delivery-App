@@ -6,44 +6,52 @@ import profileicon from "/Profile.svg";
 import arrow from "/Arrow.svg";
 import language from "/language.svg";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../store/auth/authSlice";
+import { cierreDeSesion } from "../../store/auth/thunks";
+
 const Profile = () => {
   const prods = useSelector((store) => store.auth);
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const handleProfileEd = () =>{ 
-    navigate('/profileEdit')
-  } 
-const imagenPerfil = prods.photoURL
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleProfileEd = () => {
+    navigate("/profileEdit");
+  };
+  const imagenPerfil = prods.photoURL;
 
-const sesionLog = () => {
-  console.log('logout');
-  dispatch(logout(prods.status));
-};
+  const sesionLog = () => {
+    console.log("logout");
+    dispatch(cierreDeSesion());
+  };
+ 
   return (
     <>
-    <button 
-    type="button" 
-    className="btn btn-warning "
-    onClick={sesionLog}
-    >Cerrar sesión</button>
+      <button type="button" className="btn btn-warning " onClick={sesionLog}>
+        Cerrar sesión
+      </button>
 
       <h2>Perfil</h2>
 
-    <div className="figure">
+      {/* <div className="figure">
         <img src={imagenPerfil} alt="" />
-        </div>
+      </div> */}
+      
+      <figure className="figure">
+      <img src={prods.photoURL} alt="" />
+      </figure>
+          
+        
+      
       <span className="nameUser">{prods.displayName}</span>
 
       <div className="user-profile">
         <img className="user-icon" src={profileicon} alt="Icono de Usuario" />
         <div className="profile-info">
           <span className="edit-account">Editar cuenta</span>
-          <img 
-          className="arrow-icon" 
-          onClick={handleProfileEd}
-          src={arrow} 
-          alt="Icono de Flecha" />
+          <img
+            className="arrow-icon"
+            onClick={handleProfileEd}
+            src={arrow}
+            alt="Icono de Flecha"
+          />
         </div>
       </div>
 
@@ -63,8 +71,7 @@ const sesionLog = () => {
           <ul className="dropdown-menu">
             <li>Español</li>
             <li>Inglés</li>
-            </ul>
-          
+          </ul>
         </div>
       </div>
     </>

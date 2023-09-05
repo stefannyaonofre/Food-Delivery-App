@@ -27,20 +27,20 @@ const Login = () => {
   const onSubmit = ({email,password}) => {
     
     // onResetForm()
-     console.log(email, password);
+    //  console.log(email, password);
     dispatch(startLoginWithEmailPassword({email,password}));
   };
   
 
   const onGoogleSignIn = async() => {
-    console.log("entre con google");
+    // console.log("entre con google");
 
    await dispatch(startGoogleSignIn());
-    console.log({ status });
+    // console.log({ status });
     if (status == 'authenticated') {
       navigate('/home'); // Redirige a la página de inicio (/home) después de autenticar con Google
     }else{
-      console.log('me quede en login')
+      // console.log('me quede en login')
       // navigate('/')
     }
   };
