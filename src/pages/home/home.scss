@@ -1,5 +1,21 @@
 .container-home{
     padding: 20px;
+
+    &__localizacion{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        &-img{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-direccion{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .container-filtro{
