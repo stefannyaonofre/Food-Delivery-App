@@ -4,7 +4,6 @@ import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
-import { initialUser, userReducer } from "../reducers/useReducer";
 import Registro from "../pages/registro/Registro";
 import Carrusel from "../components/carrusel/Carrusel";
 import { useSelector } from "react-redux";
@@ -19,6 +18,9 @@ import OrderAccepted from "../pages/orderAccepted/OrderAccepted";
 import Payment from "../pages/payment/Payment";
 import NewCard from "../pages/newCard/NewCard";
 import ManageAdresses from "../pages/manageAdresses/ManageAdresses";
+import ProfileEdit from "../components/profileEdit/ProfileEdit";
+import LoginPhone from "../pages/loginPhone/LoginPhone";
+import InsertCode from "../components/insertCode/InsertCode";
 
 const Router = () => {
 
@@ -29,23 +31,28 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route element={<PublicRouter isAutenticated={status} />}>
-            <Route index element={<Login />} />
-            <Route path="registro" element={<Registro />} />
-          </Route>
-          <Route element={<PrivateRouter isAutenticated={status} />}>
-            <Route element={<Layout />}>
-              <Route path="home" element={<Home />} />
+
+            <Route element={<PublicRouter isAutenticated={status} />}>
+                <Route index element={<Login />} />
+                <Route path="registro" element={<Registro />} />
+                <Route path="loginphone" element={<LoginPhone />} />
+                <Route path="insertcode" element={<InsertCode/>} />
+            </Route>
+            <Route element={<PrivateRouter isAutenticated={status} />}>
+            <Route element={<Layout/>}>
+              <Route path="home" element={<Home/>} /> 
               <Route path="restaurant" element={<RestaurantPage />} />
-              <Route path="search" element={<Search />} />
-              <Route path="orders" element={<Orders />} />
-              <Route path="profile" element={<Profile />} />
+              <Route path="search" element={<Search/>}/>
+              <Route path="orders" element={<Orders/>}/>
+              <Route path="profile" element={<Profile/>}/>
+              <Route path="profileEdit" element={<ProfileEdit/>}/>
               <Route path='adresses' element={<ManageAdresses />} />
               <Route path='order' element={<Order />} />
               <Route path='current' element={<CurrentOrder />} />
               <Route path='accepted' element={<OrderAccepted />} />
               <Route path='payment' element={<Payment />} />
               <Route path='new-card' element={<NewCard />} />
+              </Route>
             </Route>
           </Route>
         </Route>
