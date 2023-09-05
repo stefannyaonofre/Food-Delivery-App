@@ -24,7 +24,6 @@ import InsertCode from "../components/insertCode/InsertCode";
 
 const Router = () => {
 
-  const [userLogin, userDispatch] = useReducer(userReducer, initialUser)
   const { status } = useSelector(state => state.auth)
 
   return (
@@ -55,7 +54,6 @@ const Router = () => {
               </Route>
             </Route>
           </Route>
-        </Route>
       </Routes>
     </BrowserRouter>
   );
