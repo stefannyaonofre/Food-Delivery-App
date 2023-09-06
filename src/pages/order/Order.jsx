@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-
 import location from "/icons/Location.svg"
 import next from "/icons/Next.svg"
 import master from "/icons/MasterCard.png"
 import paypal from "/icons/PayPal.png"
-
 import OrderTotal from '../../components/orderTotal/OrderTotal'
 import "./order.scss"
 import food from "/icons/anh-nguyen-kcA-c3f_3FE-unsplash.jpg"
@@ -32,7 +30,7 @@ const Order = () => {
   return (
     <main className='main-order'>
         <div className='order-details'>
-        <Bar text='New order' location=''/>
+        <div text='New order' location=''/>
         <div className='order-direction'>
             <h2>Deliver to</h2>
             <div className='order-location'>
