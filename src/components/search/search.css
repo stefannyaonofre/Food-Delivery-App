@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100&family=Montserrat:wght@100&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,300&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.input {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.custom-input:focus {
+  border-color: #FFE031;
+  box-shadow: 0 0 0 0.2rem rgba(255, 153, 0, 0.25);
+}/*# sourceMappingURL=search.css.map */

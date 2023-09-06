@@ -1,0 +1,50 @@
+.container__page-restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+
+    &__logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+
+        &__img {
+            width: 40%;
+            height: 200px;
+            clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
+
+.container-filtro-restaurant{
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: space-around;
+
+    &-item{
+        background-color: rgb(224, 221, 221);
+        width: 140px;
+        height: 40px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 7px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.container-platos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}

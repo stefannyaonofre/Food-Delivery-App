@@ -1,0 +1,13 @@
+.container-plato {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-plato img {
+  width: 400px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}/*# sourceMappingURL=product.css.map */

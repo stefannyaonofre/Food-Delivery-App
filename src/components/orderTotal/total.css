@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+.order-total {
+  margin: 2rem 0;
+}
+.order-total .total-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.order-total .total-price span {
+  display: flex;
+  gap: 5px;
+}
+.order-total .total {
+  padding-top: 15px;
+}
+.order-total .total span {
+  font-size: 20px;
+}/*# sourceMappingURL=total.css.map */

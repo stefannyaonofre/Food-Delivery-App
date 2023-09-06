@@ -1,0 +1,29 @@
+
+.container-cardRes{
+    display: flex;
+    padding: 20px 0 0 0;
+
+    &__img{
+        width: 35%;
+        height: 150px;
+
+        img{
+            clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

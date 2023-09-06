@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+.main-adresses {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 2rem 1rem;
+  color: #414141;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.main-adresses .adresses {
+  margin-top: 2rem;
+}
+.main-adresses .adresses .adress {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.main-adresses .adresses .adress p {
+  font-size: 10px;
+  color: rgb(204, 204, 204);
+  padding-left: 15px;
+}
+.main-adresses .adresses .adress .location {
+  display: flex;
+  gap: 5px;
+}
+.main-adresses .adresses .adress .location span {
+  padding: 5px 0;
+  border-bottom: 1px solid #414141;
+  width: 80vw;
+}
+.main-adresses .adresses .adress .delete {
+  background-color: #FFE031;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  margin-left: -20px;
+}
+.main-adresses .adresses .adress:hover .delete {
+  display: inline-block;
+  cursor: pointer;
+}/*# sourceMappingURL=adresses.css.map */
