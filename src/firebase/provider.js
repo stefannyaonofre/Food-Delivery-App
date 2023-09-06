@@ -15,7 +15,7 @@ export const singInWithGoogle = async () => {
     // const credentials = GoogleAuthProvider.credentialFromResult(result);
     // console.log({credentials})
     const { displayName, email, photoURL, uid } = result.user;
-    console.log(result.user);
+    // console.log(result.user);
     return {
       ok: true,
       displayName,

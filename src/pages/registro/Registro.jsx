@@ -19,9 +19,9 @@ const Registro = () => {
   // const selectedFile =  photoURL[0];
 
   const onSubmit = async(data) => {
-    const { uid, photoURL, email, displayName, date, phone } = data;
+    //const { photoURL, email, displayName, date, phone, password } = data;
    
-    const resp = await dispatch(startCreatingUserWithEmailPassword({uid, photoURL, email, displayName, date, phone}));
+    //const resp = await dispatch(startCreatingUserWithEmailPassword({ photoURL, email, displayName, date, phone, password}));
     try {
       const imageFile = data.photoURL[0];
       const avatar = await fileUpload(imageFile);
@@ -30,14 +30,14 @@ const Registro = () => {
           photoURL: avatar
       }
       console.log(newUser);
-      dispatch(startNewUser(newUser));
+      dispatch(createAnUser(newUser));
       //Swal.fire("Excelente!", "Haz creado tu cuenta!", "success");
   } catch (error) {
       //Swal.fire("Oops!", "Hubo un error en la creación de tu cuenta", "error");
   }
    
 
-    if(resp){
+    if(!errorMessage){
       Swal.fire({
         icon: "success",
         title: "Registro exitoso",

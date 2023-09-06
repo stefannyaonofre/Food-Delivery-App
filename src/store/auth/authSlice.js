@@ -7,6 +7,7 @@ export const authSlice = createSlice({
         uid: null,
         email: null,
         displayName: null,
+        birthDate:null,
         photoURL: null,
         errorMessage: null,
     },
@@ -16,26 +17,30 @@ export const authSlice = createSlice({
             state.uid = payload.uid;
             state.email = payload.email;
             state.displayName = payload.displayName;
+            state.birthDate = payload.birthDate;
+            state.phone = payload.phone;
             state.photoURL = payload.photoURL;
             state.errorMessage = null;
         },
-        addNewUser:(state,{payload}) =>{
-            state.status = 'authenticated', // checking
-            state.uid = payload.uid;
-            state.userSave= true;
-            state.email = payload.email;
-            state.displayName = payload.displayName;
-            // state.date = payload.date;
-            // state.celphone = payload.celphone;
-            state.photoURL = payload.photoURL;
-        },
-        logout: ( state, { payload } ) => {
+        // addNewUser:(state,{payload}) =>{
+        //     state.status = 'authenticated', // checking
+        //     state.uid = payload.uid;
+        //     state.userSave= true;
+        //     state.email = payload.email;
+        //     state.displayName = payload.displayName;
+        //     state.date = payload.date;
+        //     state.phone = payload.phone;
+        //     state.photoURL = payload.photoURL;
+        // },
+        logout: ( state, {payload} ) => {
             state.status = 'not-authenticated', // 'checking', 'not-authenticated', 'authenticated'
             state.uid = null;
             state.email = null;
             state.displayName = null;
+            state.birthDate = null;
+            state.phone = null;
             state.photoURL = null;
-            state.errorMessage = payload.errorMessage;
+            state.errorMessage = payload;
         },
         checkingCredentials: (state) => {
             state.status = 'checking';
