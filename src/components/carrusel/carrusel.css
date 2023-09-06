@@ -1,0 +1,20 @@
+.containerr {
+  padding: 4px;
+}
+.containerr .swiperContainer .swiper-slide {
+  width: 280px !important;
+  height: 100px;
+  display: 90px !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 8px 0;
+}
+.containerr .swiperContainer .swiper-slide img {
+  width: auto;
+  height: 100%;
+  border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=carrusel.css.map */

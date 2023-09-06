@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+.main-card {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding: 2rem 1rem;
+  color: #414141;
+}
+.main-card .card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  margin-top: 2rem;
+}
+.main-card .card-form input {
+  background-color: rgb(242, 242, 242);
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(204, 204, 204);
+  width: 100%;
+  margin-bottom: 10px;
+}
+.main-card .card-form .card-details {
+  display: flex;
+  gap: 15px;
+}
+.main-card .card-form .card-number {
+  position: relative;
+}
+.main-card .card-form .card-number img {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}/*# sourceMappingURL=newCard.css.map */

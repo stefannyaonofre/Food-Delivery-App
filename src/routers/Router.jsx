@@ -23,6 +23,7 @@ import InsertCode from "../components/insertCode/InsertCode";
 import { onAuthStateChanged } from "@firebase/auth";
 import { getUserActionFromCollection } from "../store/auth/thunks";
 import { firebaseAuth, firebaseDB } from "../firebase/config";
+import Product from "../pages/product/Product";
 
 const Router = () => {
   const { status, uid} = useSelector((state) => state.auth);
@@ -60,7 +61,7 @@ const Router = () => {
           <Route element={<PrivateRouter isAutenticated={status} />}>
             <Route element={<Layout />}>
               <Route path="home" element={<Home />} />
-              <Route path="restaurant" element={<RestaurantPage />} />
+              <Route path=":idRestaurant" element={<RestaurantPage />} />
               <Route path="search" element={<Search />} />
               <Route path="orders" element={<Orders />} />
               <Route path="profile" element={<Profile />} />
@@ -71,8 +72,7 @@ const Router = () => {
               <Route path="accepted" element={<OrderAccepted />} />
               <Route path="payment" element={<Payment />} />
               <Route path="new-card" element={<NewCard />} />
-
-            
+              <Route path=":idPlato/Product" element={<Product />}/>
             </Route>
           </Route>
         </Route>

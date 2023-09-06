@@ -1,0 +1,33 @@
+.container-home {
+  padding: 20px;
+}
+.container-home__localizacion {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.container-home__localizacion-img {
+  display: flex;
+  justify-content: center;
+}
+.container-home__localizacion-direccion {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-filtro {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-around;
+}
+.container-filtro-item {
+  background-color: rgb(224, 221, 221);
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=home.css.map */

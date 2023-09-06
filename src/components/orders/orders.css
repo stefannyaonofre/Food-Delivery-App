@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100&family=Montserrat:wght@100&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,300&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.orders .order {
+  display: flex;
+  align-items: center;
+}
+.orders .order figure {
+  margin: 0;
+  padding: 10px;
+}
+.orders .order__info {
+  display: flex;
+  align-items: center;
+}
+.orders .order__info .restaurant {
+  display: flex;
+  flex-direction: column;
+}
+.orders .order__info .status {
+  display: flex;
+  margin-left: 190px;
+  gap: 10px;
+}/*# sourceMappingURL=orders.css.map */
