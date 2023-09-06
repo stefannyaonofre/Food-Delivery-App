@@ -27,7 +27,7 @@ const ProfileEdit = () => {
 
   const handleSave = async () => {
     try {
-      const userDocRef = doc(firebaseDB, "usuarios", prods.uid);
+      const userDocRef = doc(firebaseDB, "usuarios", prods.uid); //obtengo el documento
 
       // para actualizar los datos del documento
       await updateDoc(userDocRef, {
@@ -91,12 +91,11 @@ const ProfileEdit = () => {
           <img src={fotoURL} alt="" />
         </figure>
       )}
-
+{/* //!selectedImage no se ha seleccionado una foto*/}
       {isEditingFoto && !selectedImage && (
         <div>
           <input
             type="file"
-            accept="image/*"
             onChange={(e) => handleImageUpload(e.target.files[0])}
           />
           <button onClick={() => setIsEditingFoto(false)}>Cancelar</button>
