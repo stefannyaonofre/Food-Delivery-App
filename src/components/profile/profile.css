@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100&family=Montserrat:wght@100&family=Open+Sans:ital@1&family=Roboto:ital,wght@0,100;1,300&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.figure img {
+  width: 80px;
+  height: 80px;
+}
+
+.nameUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.user-profile .user-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.user-profile .profile-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.user-profile .profile-info .edit-account {
+  margin-right: 10px;
+  color: #000000;
+}
+.user-profile .profile-info .arrow-icon {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=profile.css.map */

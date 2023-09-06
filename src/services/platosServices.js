@@ -1,4 +1,4 @@
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
 import { firebaseDB } from "../firebase/config";
 
 const colletictionName = "platos";
@@ -41,3 +41,15 @@ export const getMenu = async (idRestaurant) => {
     return null;
   }
 };
+
+export const getPlatoById = async (idPlato) => {
+    try {
+        const q = doc(collectionRef, idPlato);
+        const querySnapshot = await getDoc(q);
+        const plato = querySnapshot.data();
+        return plato;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}

@@ -1,0 +1,26 @@
+.container-cardRes {
+  display: flex;
+  padding: 20px 0 0 0;
+}
+.container-cardRes__img {
+  width: 35%;
+  height: 150px;
+}
+.container-cardRes__img img {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.container-cardRes__info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+.container-cardRes__info img {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=cardRestaurante.css.map */
